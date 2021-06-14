@@ -1,0 +1,17 @@
+{
+  "name": "casidoo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "esr tests/index.ts"
+  },
+  "dependencies": {
+    "simut": "^0.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "esbuild": "^0.12.8",
+    "esbuild-runner": "^2.2.0"
+  }
+}
