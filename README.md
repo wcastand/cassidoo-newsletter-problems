@@ -2,8 +2,7 @@
 
 ## Cassidoo
 
-This is her [website](https://cassidoo.co/), [Twitter](https://twitter.com/cassidoo/)
-[newsletter](https://cassidoo.co/newsletter/)
+This is her [website](https://cassidoo.co/), [Twitter](https://twitter.com/cassidoo/), [newsletter](https://cassidoo.co/newsletter/)
 
 It's cool, go subscribe, it's free !
 
