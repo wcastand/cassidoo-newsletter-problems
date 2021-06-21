@@ -60,3 +60,29 @@ Given a direction and a number of columns, write a function that outputs an arro
    *
     *
 ```
+
+## Cube generator
+
+Write a function that draws an ASCII art cube of given height x.
+
+```
+$ drawCube(2)
+  +----+
+ /    /|
++----+ |
+|    | +
+|    |/
++----+
+
+$ drawCube(4)
+
+   +--------+
+  /        /|
+ /        / |
++--------+  |
+|        |  |
+|        |  +
+|        | /
+|        |/
++--------+
+```
