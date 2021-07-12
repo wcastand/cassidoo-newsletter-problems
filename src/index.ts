@@ -53,3 +53,26 @@ export function drawCube(size: number): string {
 	cube += l
 	return cube
 }
+
+export function translateShift(str: string): string {
+	const map = `1234567890-=qwertyuiop[]asdfghjkl;'\zxcvbnm,./`.split('')
+	return str
+		.split('')
+		.map((c) => {
+			const idx = map.findIndex((v) => v === c.toLowerCase())
+			return idx !== -1 ? map[idx - 1 <= 0 ? map.length - 1 : idx - 1] : c
+		})
+		.join('')
+}
+
+function converttobit(ip: string): string {
+	const v = ip.split('.')
+	const bin = v.map((s) => parseInt(s, 10)).map((s) => ('000000000' + s.toString(2)).substr(-8))
+	return bin.join('')
+}
+
+export function inRange(ip: string, range: string): boolean {
+	const [start, mask] = range.split('/')
+	const prefix = parseInt(mask, 10)
+	return converttobit(ip).slice(0, prefix) === converttobit(start).slice(0, prefix)
+}

@@ -86,3 +86,31 @@ $ drawCube(4)
 |        |/
 +--------+
 ```
+
+## Pride flag
+
+If you are lucky you get the good colors i guess. [https://www.wcastand.dev/#day2](https://www.wcastand.dev/#day2)
+
+## Translate Shift
+
+Imagine your users are all typing slightly incorrectly, in that they shifted their hands one key to the right. Write a function that translates what they mean to say.
+
+```
+$ translateShift(';p; epe')
+"lol wow"
+
+$ translateShift('vtsmnrttu')
+"cranberry"
+```
+
+## In Range
+
+Given an IPv4 address and a netmask in CIDR notation, return a boolean specifying whether the IP address is inside the given range.
+
+```
+$ inRange("192.168.4.27", "192.168.0.0/16")
+$ true
+
+$ inRange("192.168.4.27", "192.168.1.0/24")
+$ false
+```

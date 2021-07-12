@@ -1,7 +1,7 @@
 import { strict as assert } from 'assert'
-import { test, run, group } from 'simut'
+import { test, run, only, group } from 'simut'
 
-import { lonelyNumber, drawArrow, drawCube } from '../src/'
+import { lonelyNumber, drawArrow, drawCube, translateShift, inRange } from '../src/'
 
 group('Lonely number')
 
@@ -36,5 +36,21 @@ test('should make a cube of height 4', async () =>
 		drawCube(4),
 		`\n   +--------+\n  /        /|\n /        / |\n+--------+  |\n|        |  |\n|        |  +\n|        | /\n|        |/\n+--------+`
 	))
+
+group('Translate Shift')
+
+test('should not throw', async () => assert.doesNotThrow(() => translateShift('translateShift')))
+
+test('should translate correctly', async () => assert.equal(translateShift(';p; epe'), 'lol wow'))
+test('should translate correctly', async () => assert.equal(translateShift('vtsmnrttu'), 'cranberry'))
+test('should translate correctly', async () => assert.equal(translateShift('vtsmnrttu/'), 'cranberry.'))
+test('should translate correctly', async () => assert.equal(translateShift('vtsmnrttu1'), 'cranberry/'))
+
+group('In Range')
+
+test('should not throw', async () => assert.doesNotThrow(() => inRange('192.168.4.27', '192.168.0.0/16')))
+
+test('should return right bool', async () => assert.equal(inRange('192.168.4.27', '192.168.0.0/16'), true))
+test('should return right bool', async () => assert.equal(inRange('192.168.4.27', '192.168.1.0/24'), false))
 
 run()
